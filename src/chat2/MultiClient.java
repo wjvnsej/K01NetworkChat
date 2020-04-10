@@ -6,7 +6,7 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.Scanner;
 
-public class MultiClient {
+public class MultiClient { 
 
 	public static void main(String[] args) {
 
