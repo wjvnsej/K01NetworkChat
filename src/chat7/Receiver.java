@@ -38,7 +38,6 @@ public class Receiver extends Thread {
 					(URLDecoder.decode(in.readLine(),"UTF-8"));
 			} 
 			catch (SocketException e) {
-				System.out.println("SocketException 발생됨");
 				break;
 			}
 			catch (Exception e) {

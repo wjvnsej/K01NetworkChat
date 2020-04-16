@@ -30,13 +30,7 @@ import java.util.Scanner;
 public class MultiClient {
 
 	public static void main(String[] args) {
-		String s_name = "";
 		
-		while (s_name.isEmpty()) {
-			System.out.println("이름을 입력하세요.");
-			Scanner scanner = new Scanner(System.in);
-			s_name = scanner.nextLine();
-		}
 		
 		
 		//Sender가 기능을 가져가므로 여기서는 필요없음
@@ -51,6 +45,16 @@ public class MultiClient {
 			}
 			Socket socket = new Socket(ServerIP, 9999);
 			System.out.println("서버와 연결되었습니다..");
+			
+			
+			String s_name = "";
+			
+			while (s_name.isEmpty()) {
+				System.out.println("이름을 입력하세요.");
+				Scanner scanner = new Scanner(System.in);
+				s_name = scanner.nextLine();
+			}
+			
 			
 			//서버에서 보내는 Echo메세지를 클라이언트에 출력하기 위한 쓰레드 생성
 			Thread receiver = new Receiver(socket);
