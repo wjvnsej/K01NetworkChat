@@ -25,7 +25,6 @@ public class MultiServer {
 	static Socket socket = null;
 	//클라이언트 정보 저장을 위한 Map컬렉션 정의
 	Map<String, PrintWriter> clientMap;
-	
 	PreparedStatement psmt;
 	Connection con;
 	ResultSet rs;
